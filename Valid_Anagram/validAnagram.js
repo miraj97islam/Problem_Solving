@@ -1,3 +1,5 @@
+//242. leetcode problem
+
 string1 = 'mmjrai'
 string2 = 'mirajm'
 
