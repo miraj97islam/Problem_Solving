@@ -1,0 +1,29 @@
+let stones = [2,7,4,1,8,1];
+
+var lastStoneWeight = function(stones) {
+    
+    let newStones = stones;
+
+    while(newStones.length > 1){     
+
+        newStones.sort((a,b)=> {return b-a})
+
+        if(newStones[0] === newStones[1]){  
+            newStones.shift();
+            newStones.shift();
+        }else if (newStones[0] !== newStones[1]){
+            newStones[0] = newStones[0] - newStones[1];    
+            newStones.splice(1,1);   
+        }
+
+    }
+
+    if(newStones.length===1){
+        return newStones[0];
+    }else if(newStones.length < 1){
+        return 0;
+    }
+      
+};
+
+console.log(lastStoneWeight(stones));
